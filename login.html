@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeDaily - Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-blue-600 p-4 text-white">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">CodeDaily</h1>
+      <div>
+        <a href="index.html" class="mx-2 hover:text-blue-200">Home</a>
+        <a href="challenges.html" class="mx-2 hover:text-blue-200">Challenges</a>
+        <a href="leaderboard.html" class="mx-2 hover:text-blue-200">Leaderboard</a>
+        <a href="login.html" class="mx-2 hover:text-blue-200">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Section -->
+  <section class="container mx-auto my-10">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+      <h3 class="text-2xl font-bold mb-6">Login</h3>
+      <form id="loginForm">
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-2" for="username">Username</label>
+          <input type="text" id="username" class="w-full p-2 border rounded-lg" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-2" for="password">Password</label>
+          <input type="password" id="password" class="w-full p-2 border rounded-lg" required>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Login</button>
+      </form>
+      <p class="mt-4 text-center">Don't have an account? <a href="#" class="text-blue-600 hover:underline">Sign up</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2023 CodeDaily. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      alert(`Welcome back, ${username}!`);
+      // Redirect to challenges page after login
+      window.location.href = 'challenges.html';
+    });
+  </script>
+</body>
+</html>

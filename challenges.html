@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeDaily - Challenges</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-blue-600 p-4 text-white">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">CodeDaily</h1>
+      <div>
+        <a href="index.html" class="mx-2 hover:text-blue-200">Home</a>
+        <a href="challenges.html" class="mx-2 hover:text-blue-200">Challenges</a>
+        <a href="leaderboard.html" class="mx-2 hover:text-blue-200">Leaderboard</a>
+        <a href="login.html" class="mx-2 hover:text-blue-200">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Challenges Section -->
+  <section class="container mx-auto my-10">
+    <h3 class="text-2xl font-bold mb-6">Today's Challenges</h3>
+    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+      <h4 class="text-xl font-semibold">Challenge #1: Sum of Two Numbers</h4>
+      <p class="mt-2">Write a function that takes two numbers as input and returns their sum.</p>
+      <div class="mt-4">
+        <textarea id="codeInput" class="w-full p-2 border rounded-lg" rows="5" placeholder="Write your code here..."></textarea>
+      </div>
+      <button onclick="submitCode()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Submit</button>
+      <p id="result" class="mt-4 text-green-600 font-semibold"></p>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h4 class="text-xl font-semibold">Challenge #2: Reverse a String</h4>
+      <p class="mt-2">Write a function that takes a string as input and returns the reversed string.</p>
+      <div class="mt-4">
+        <textarea class="w-full p-2 border rounded-lg" rows="5" placeholder="Write your code here..."></textarea>
+      </div>
+      <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Submit</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2023 CodeDaily. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function submitCode() {
+      const code = document.getElementById('codeInput').value;
+      // Simulate code validation
+      if (code.includes('return a + b')) {
+        document.getElementById('result').textContent = 'Correct! You earned 10 points.';
+      } else {
+        document.getElementById('result').textContent = 'Try again!';
+      }
+    }
+  </script>
+</body>
+</html>

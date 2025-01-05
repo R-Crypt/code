@@ -1,0 +1,17 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  background-color: #2563eb;
+}
+
+.hero {
+  background-color: #3b82f6;
+}
+
+.challenge-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
